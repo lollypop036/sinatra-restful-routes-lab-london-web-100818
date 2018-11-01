@@ -1,0 +1,15 @@
+
+<h1>Mama June's Delightful Recipes</h1>
+
+
+
+
+<h2>Edit Recipe - <%=@recipe.name%></h2>
+<form action="/recipes/<%= @recipe.id %>" method="post">
+<input id="hidden" type="hidden" name="_method" value="patch">
+<p>Name <input type="text" id="name" name="recipe[name]" value"<%=@recipe.name%>"></p>
+<p>Ingredients <input type="text" id="ingredients" name="recipe[ingredients]" value="<%=@recipe.ingredients%>"></p>
+<p>Cook time <input type="text" id="cook_time" name="recipe[cook_time]" value="<%=@recipe.cook_time%>"></p>
+<input id="submit" type="submit">
+</form>
+

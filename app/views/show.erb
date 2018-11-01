@@ -1,0 +1,18 @@
+
+<h1>Mama June's Delightful Recipes</h1>
+
+<h2><%=@recipe.name%></h2>
+
+<ul>
+<li>Ingredients: <%=@recipe.ingredients%> </li>
+<li>Cook Time: <%=@recipe.cook_time%></li>
+</ul>
+
+<a href="/recipes/<%=@recipe.id%>/edit">Edit recipe</a>
+
+
+
+<form action="/recipes/<%=@recipe.id%>/delete" method="post">
+<input id="hidden" type="hidden" name="_method" value="delete">
+<input type="submit" value="delete" id="delete">
+</form>

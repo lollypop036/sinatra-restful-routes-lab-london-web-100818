@@ -1,0 +1,10 @@
+<h1>Mama June's Delightful Recipes</h1>
+
+
+<%@recipes.all.each do |recipe|%>
+
+    <h2><%=recipe.name%></h2>
+    <a href="/recipes/<%=recipe.id%>">View recipe</a>
+
+
+<%end%>
